@@ -9,6 +9,6 @@ services:
     rootDir: .  # Porque ya estás dentro de backend
     envVars:
       - key: MONGO_URI
-        value: <tu URI de MongoDB>
+        value: mongodb+srv://univeroas:S1lemk22oZEr08rA@cineversecluster.kdzm71c.mongodb.net/cecyflix?retryWrites=true&w=majority
       - key: OPENROUTER_API_KEY
-        value: <tu clave API de OpenRouter>
+        value: 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
