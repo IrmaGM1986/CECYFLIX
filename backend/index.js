@@ -8,8 +8,13 @@ const app = express();
 const PORT = 4000;
 
 // Middlewares
-app.use(cors({origin: 'https://recomendaciones-frontend-bilm.onrender.com'
-}));
+const corsOptions = {
+  origin: 'https://recomendaciones-frontend-bilm.onrender.com',
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
+};
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 // Conectar a MongoDB
