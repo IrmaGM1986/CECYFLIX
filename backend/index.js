@@ -3,6 +3,8 @@ const axios = require('axios');
 const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
+console.log("CLAVE IA:", process.env.OPENROUTER_API_KEY);
+
 
 const app = express();
 const PORT = 4000;
