@@ -42,7 +42,7 @@ app.get('/api/peliculas', async (req, res) => {
   }
 });
 
-// Ruta con IA
+// Ruta con IA actualizada con modelo GPT-3.5
 app.post('/api/recomendaciones', async (req, res) => {
   const { prompt } = req.body;
 
@@ -58,7 +58,7 @@ app.post('/api/recomendaciones', async (req, res) => {
     const response = await axios.post(
       'https://openrouter.ai/api/v1/chat/completions',
       {
-        model: 'mistralai/mistral-7b-instruct:free',
+        model: 'openai/gpt-3.5-turbo',
         messages: [{ role: 'user', content: prompt }],
       },
       { headers }
@@ -76,3 +76,4 @@ app.post('/api/recomendaciones', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
 });
+
