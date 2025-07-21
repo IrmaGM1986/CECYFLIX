@@ -36,7 +36,7 @@ function App() {
     setPeliculasFiltradas([]);
 
     try {
-  const response = await fetch('https://cecyflix-kvny.onrender.comapi/peliculas', {
+  const response = await fetch('https://cecyflix-kvny.onrender.com/api/peliculas', {
    method: 'POST',
    headers: { 'Content-Type': 'application/json' },
    body: JSON.stringify({
