@@ -36,10 +36,10 @@ function App() {
     setPeliculasFiltradas([]);
 
     try {
-  const response = await fetch('https://cecyflix-kvny.onrender.com/api/peliculas', {
-   method: 'POST',
-   headers: { 'Content-Type': 'application/json' },
-   body: JSON.stringify({
+ const response = await fetch('https://cecyflix-kvny.onrender.com/api/recomendaciones', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
     prompt: `Tengo una base de datos con estas películas:
       ${peliculas.map(p => p.titulo).join(', ')}.
       Quiero que me digas solo los títulos de las películas que coincidan con esta descripción: "${input}".
