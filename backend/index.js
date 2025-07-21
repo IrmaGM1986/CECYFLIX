@@ -26,16 +26,7 @@ app.use('/api/peliculas', peliculasRouter);            // 👈 Esta línea monta
 // Modelo de Película
 const Pelicula = require('./models/Pelicula');
 
-// Ruta GET para obtener todas las películas desde MongoDB
-app.get('/api/peliculas', async (req, res) => {
-  try {
-    const peliculas = await Pelicula.find();
-    res.json(peliculas);
-  } catch (error) {
-    console.error('❌ Error al obtener películas:', error.message);
-    res.status(500).json({ mensaje: 'Error al obtener películas' });
-  }
-});
+//aQUI BORRE 01
 
 // Ruta POST para procesar búsqueda por descripción con IA
 app.post('/api/recomendaciones', async (req, res) => {
