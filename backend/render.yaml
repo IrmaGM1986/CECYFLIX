@@ -6,7 +6,7 @@ services:
     region: oregon
     buildCommand: npm install
     startCommand: node index.js
-    rootDir: .  # Porque ya estás dentro de backend
+    rootDir: .  
     envVars:
       - key: MONGO_URI
         value: mongodb+srv://univeroas:S1lemk22oZEr08rA@cineversecluster.kdzm71c.mongodb.net/cecyflix?retryWrites=true&w=majority

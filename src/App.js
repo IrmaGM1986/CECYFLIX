@@ -9,7 +9,7 @@ function App() {
   const [peliculasRecomendadas, setPeliculasRecomendadas] = useState([]);
 
   useEffect(() => {
-    fetch('/api/peliculas')
+    fetch('https://cecyflix-kvny.onrender.com')
       .then((res) => res.json())
       .then((data) => {
         setPeliculas(data);
@@ -36,7 +36,7 @@ function App() {
     setPeliculasFiltradas([]);
 
     try {
-  const response = await fetch('/api/recomendaciones', {
+  const response = await fetch('https://cecyflix-kvny.onrender.com', {
    method: 'POST',
    headers: { 'Content-Type': 'application/json' },
    body: JSON.stringify({
