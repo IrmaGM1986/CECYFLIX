@@ -42,8 +42,8 @@ function App() {
   body: JSON.stringify({
     prompt: `Tengo una base de datos con estas películas:
       ${peliculas.map(p => p.titulo).join(', ')}.
-      Quiero que me comentes que comprende la categoria y muestres solo los títulos de las películas que coincidan con esta descripción: "${input}".
-      Devuélveme la descripción de la categoría y  los títulos separados por comas, y ESCRIBE TODO en ESPAÑOL.`
+      Dame una recomendación basada eb esta descripción, usa solo películas de este catálogo: "${input}".
+      Devuélveme solo los títulos separados por comas, y ESCRIBE TODO en ESPAÑOL.`
    }),
  });
 
