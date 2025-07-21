@@ -9,7 +9,7 @@ function App() {
   const [peliculasRecomendadas, setPeliculasRecomendadas] = useState([]);
 
   useEffect(() => {
-    fetch('https://cecyflix-kvny.onrender.com')
+    fetch('https://cecyflix-kvny.onrender.com/api/peliculas')
       .then((res) => res.json())
       .then((data) => {
         setPeliculas(data);
