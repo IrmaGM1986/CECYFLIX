@@ -43,7 +43,7 @@ function App() {
     prompt: `Tengo una base de datos con estas películas:
       ${peliculas.map(p => p.titulo).join(', ')}.
       Quiero que me digas solo los títulos de las películas que coincidan con esta descripción: "${input}".
-      Devuélveme únicamente los títulos separados por comas.`
+      Devuélveme únicamente los títulos separados por comas, y ESCRIBE TODO en ESPAÑOL.`
    }),
  });
 
