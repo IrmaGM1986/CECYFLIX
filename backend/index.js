@@ -60,6 +60,7 @@ app.post('/api/recomendaciones', async (req, res) => {
       {
         model: 'openai/gpt-4o',
         messages: [{ role: 'user', content: prompt }],
+        max_tokens: 800
       },
       { headers }
     );
